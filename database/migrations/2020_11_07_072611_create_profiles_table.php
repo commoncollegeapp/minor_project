@@ -24,6 +24,7 @@ class CreateProfilesTable extends Migration
             $table->string('school_name');
             $table->string('marksheet_photo');
             $table->string('interest');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

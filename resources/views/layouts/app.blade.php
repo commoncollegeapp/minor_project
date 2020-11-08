@@ -25,12 +25,12 @@
             <div class="container">
                 @guest
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="images/logo.jpg" alt="Common College App">
+                        <img src="/images/logo.jpg" alt="Common College App">
                         <!-- {{ config('app.name', 'Laravel') }} -->
                     </a>
                 @else
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        <img src="images/logo.jpg" alt="Common College App">
+                        <img src="/images/logo.jpg" alt="Common College Apps">
                         <!-- {{ config('app.name', 'Laravel') }} -->
                     </a>
                 @endguest
