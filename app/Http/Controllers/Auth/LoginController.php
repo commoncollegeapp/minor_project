@@ -42,7 +42,7 @@ class LoginController extends Controller
         
     // }
     
-    //protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::HOME;
 
 
 
@@ -60,9 +60,9 @@ class LoginController extends Controller
     {
         if ( $user->profile_id ) {// do your magic here
 
-            return redirect()->route('/home');
+            return redirect()->route('profile.create');
         }
 
-        return redirect('/profile/create');
+        return redirect('/home');
     }
 }

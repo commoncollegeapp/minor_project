@@ -62,16 +62,13 @@ class ProfileController extends Controller
         $request->marksheet_photo->move(public_path('images/marksheet_photos'), $marksheet_photo);
         $profile->marksheet_photo = $marksheet_photo;
         $profile->user_id = Auth::user()->id;
-
-        // User::profile_id = 1;
-
+        
         $profile->save();
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->profile_id = 0;
+        $user->save();
         return redirect()->route('home');
-
-        // $profile = new Profile();
-
-        // 
-        // $profile->interest = $request->interest;
 
     }
 
